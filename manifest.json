@@ -1,0 +1,10 @@
+
+{
+  "id": "obsidian-finance-tracker",
+  "name": "Finance Tracker",
+  "version": "1.0.0",
+  "minAppVersion": "0.12.0",
+  "description": "Track and visualize personal expenses in Obsidian",
+  "author": "Rishi Tez Reddy",
+  "main": "main.js"
+}
