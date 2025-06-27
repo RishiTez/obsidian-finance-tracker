@@ -302,3 +302,4 @@ module.exports = class FinanceTrackerPlugin extends Plugin {
     return html;
   }
 };
+
