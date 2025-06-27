@@ -6,5 +6,6 @@
   "minAppVersion": "0.12.0",
   "description": "Track and visualize personal expenses",
   "author": "Rishi Tez Reddy",
-  "main": "main.js"
+  "main": "main.js",
+  "isDesktopOnly": true
 }
