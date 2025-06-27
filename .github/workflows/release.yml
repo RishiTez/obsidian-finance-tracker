@@ -1,0 +1,26 @@
+name: Release Obsidian Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on tags like v1.0.0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Create plugin ZIP
+        run: |
+          zip -r finance-tracker.zip manifest.json main.js
+
+      - name: Upload Release to GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Finance Tracker ${{ github.ref_name }}
+          files: finance-tracker.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
